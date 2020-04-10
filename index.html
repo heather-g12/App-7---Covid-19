@@ -247,12 +247,53 @@ div class="page" id="eleven"> <!--creates a page for question 11-->
 	<script> //indicates that this code is being written in javascript
 	function showResults() { //function called showResults created. This does the math required to make the allergy or cold counts into percentages.
 		var resultText = document.getElementById("results"); //creates a variable called resultText which prints the results of the user's response on the results page.
-		var total = allergy_count + cold_count; //variable that creates the total count of responses by adding the allergy count and cold count.
+		var total = allergy_count + cold_count + covid_count + flu_count; //variable that creates the total count of responses by adding the allergy count and cold count.
 		var allergyPercent = (((allergy_count)/(total))*100); //turns the allergy count into a percentage by dividing the allergy count by the toal and dividing by 100.
 		var coldPercent = (((cold_count)/(total))*100); //turns the cold count into a percentage by dividing the cold count by the total and multiplying by 100.
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%" + "<br> Probability it is a cold =" + coldPercent + "%"; //Prints out a string of text that combines the numbers retrieved mathematically with the words "probability it is a cold/allerigies"-->
+		var covidPercent = (((covid_count)/(total))*100); //turns the covid count into a percentage by dividing the covid count by the total and multiplying by 100.
+		var fluPercent = (((flu_count)/(total))*100); //turns the flu count into a percentage by dividing the flu count by the total and multiplying by 100.
+		resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" + "<br> Probability it is a cold = " + coldPercent + "%" + "<br> Probability it is Covid-19 = " covidPercent + "%" + "<br> Probability it is the flu = " + fluPercent + "%"; //Prints out a string of text that combines the numbers retrieved mathematically with the words "probability it is a cold/allerigies/covid-19/flu"-->
 	}
 	</script> <!--ends code written in javascript-->
+
+<script>
+window.onload = function () {
+	
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	
+	title:{
+		text:"What Your Symptoms Indicate"
+	},
+	axisX:{
+		interval: 1
+	},
+	axisY2:{
+		interlacedColor: "rgba(1,77,101,.2)",
+		gridColor: "rgba(1,77,101,.1)",
+		title: "Percent Likelihood You Are Infected"
+	},
+	data: [{
+		type: "bar",
+		name: "disease",
+		axisYType: "secondary",
+		color: "#014D65",
+		dataPoints: [
+			{ y: covidPercent, label: "Covid-19" },
+			{ y: fluPercent, label: "Flu" },
+			{ y: coldPercent, label: "Cold" },
+			{ y: allergyPercent, label: "Seasonal Allergies" },
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	
 	<a href="#results" onclick="showResults();" class="w3-btn w3-black w3-round"> Show Results </a> <!--creates a button that says show results which calls the function showResults(). The results are then printed out onto the page-->
 	
