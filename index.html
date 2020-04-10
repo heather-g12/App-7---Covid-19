@@ -133,7 +133,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<h1>Question 3</h1> <!--Header reads "Question 3"-->
 	</div>
 	
-	<div id="content" class="w3-container"> <--COME BACK TO THIS ONE!! HAVE TO FIGURE OUT HOW TO POSE QUESTION-->
+	<div id="content" class="w3-container"> 
 		<p>Do you have a sore throat?</p> <!--Question presented as text on screen below the header-->
 		<a href="#four" onclick="coldAdd(); covidAdd(); fluAdd(); allergyAdd();" class="w3-btn w3-black w3-round"> Yes </a> <!--Creates a "yes" button which adds to the variable cold_count by calling the coldAdd() function. Takes the user to the next question.-->
 		<a href="#four" onclick="allergyAdd(); covidAdd(); fluAdd();" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "no" button which adds to the variable allergy_count by calling the allergyAdd() function. Takes the user to the next question.-->
@@ -234,8 +234,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container"> <!--separates header from the rest of the page-->
 		<p>Are you feeling weak or tired?</p> <!--text printed below header-->
-		<a href="#eleven" onclick="covidAdd(); fluAdd(); coldAdd(); allergyAdd();" class="w3-btn w3-black w3-round"> Yes</a> <!--Creates a "yes" button which adds to the variable allergy_count by calling the allergyAdd() function. Takes the user to the next question.-->
-		<a href="#eleven" onclick="coldAdd(); allergyAdd(); covidAdd()" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "no" button which adds to the variable cold_count by calling the coldAdd() function. Takes the user to the next question.-->
+		<a href="#results" onclick="covidAdd(); fluAdd(); coldAdd(); allergyAdd();" class="w3-btn w3-black w3-round"> Yes</a> <!--Creates a "yes" button which adds to the variable allergy_count by calling the allergyAdd() function. Takes the user to the next question.-->
+		<a href="#results" onclick="coldAdd(); allergyAdd(); covidAdd()" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "no" button which adds to the variable cold_count by calling the coldAdd() function. Takes the user to the next question.-->
 	</div>
 </div> <!--ends page for question 11-->
 	
