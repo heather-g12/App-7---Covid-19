@@ -244,6 +244,42 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<h1>Results</h1> <!--header reads "Results"-->
 	</div> <!--separates header from the rest of the page-->
 	
+	<!-- Begins code for column chart. Code is written in JavaScript -->
+	<script>
+	window.onload = function () {
+
+	var chart = new CanvasJS.Chart("chartContainer", { //creates a variable called chart that stores the data for the column chart
+		//code below sets the style\colors of chart
+		animationEnabled: true,
+		theme: "light2", // "light1", "light2", "dark1", "dark2"
+		title:{
+			text: "What Your Symptoms Indicate" //title of column chart
+		},
+		axisY: {
+			title: "Percent Likelihood of Infection" //title of y-axis
+		},
+		data: [{        
+			type: "column",  
+			showInLegend: true, 
+			legendMarkerColor: "grey",
+			legendText: "Illness", //title of x-axis
+			dataPoints: [      
+				{ y: coldPercent, label: "Cold" }, //column for cold is set equal to the percentage calculated in results
+				{ y: covidPercent,  label: "Covid-19" }, //column for covid-19 is set equal to the percentage calculated in results
+				{ y: fluPercent,  label: "Flu" }, //column for flu is set equal to percentage calculated in results
+				{ y: allergyPercent,  label: "Seasonal Allergies" }, //column for allergies is set equal to the percentage calculated in results
+			]
+		}]
+	});
+	chart.render();
+
+	}
+	</script>
+	</head>
+	<body>
+	<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> <!-- ends code for column chart. Closes out JavaScript code -->	
+	
 	<script> //indicates that this code is being written in javascript
 	function showResults() { //function called showResults created. This does the math required to make the allergy or cold counts into percentages.
 		var resultText = document.getElementById("results"); //creates a variable called resultText which prints the results of the user's response on the results page.
@@ -255,48 +291,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" + "<br> Probability it is a cold = " + coldPercent + "%" + "<br> Probability it is Covid-19 = " covidPercent + "%" + "<br> Probability it is the flu = " + fluPercent + "%"; //Prints out a string of text that combines the numbers retrieved mathematically with the words "probability it is a cold/allerigies/covid-19/flu"-->
 	}
 	</script> <!--ends code written in javascript-->
-
-<script>
-window.onload = function () {
-	
-var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	
-	title:{
-		text:"What Your Symptoms Indicate"
-	},
-	axisX:{
-		interval: 1
-	},
-	axisY2:{
-		interlacedColor: "rgba(1,77,101,.2)",
-		gridColor: "rgba(1,77,101,.1)",
-		title: "Percent Likelihood You Are Infected"
-	},
-	data: [{
-		type: "bar",
-		name: "disease",
-		axisYType: "secondary",
-		color: "#014D65",
-		dataPoints: [
-			{ y: covidPercent, label: "Covid-19" },
-			{ y: fluPercent, label: "Flu" },
-			{ y: coldPercent, label: "Cold" },
-			{ y: allergyPercent, label: "Seasonal Allergies" },
-		]
-	}]
-});
-chart.render();
-
-}
-</script>
-</head>
-<body>
-<div id="chartContainer" style="height: 300px; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	
 	<a href="#results" onclick="showResults();" class="w3-btn w3-black w3-round"> Show Results </a> <!--creates a button that says show results which calls the function showResults(). The results are then printed out onto the page-->
-	
+
 	
 </div> <!--ends the results page-->
 		
