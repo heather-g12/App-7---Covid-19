@@ -87,7 +87,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <!--This creates the first page of our website-->
 <body> 
-<div id="header" class="w3-container w3-flat-carrot"> <!--Creates a header on the home page that reads "Cold or Allergies?-->
+<div id="header" class="w3-container w3-flat-carrot"> <!--Creates a header on the home page that reads "Cold or Coronavirus?-->
 	<h1>Cold or Coronavirus?</h1>
 </div>
 	
@@ -107,10 +107,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
         	<p>How long have you been experiencing symptoms?</p>  <!--This question appears as text on the screen-->  
-		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black w3-round"> Several Weeks </a> 
-		<a href="#two" oncLick="coldAdd();" class="w3-btn w3-black w3-round"> Less than 14 Days </a>
-		<a href="#two" oncLick="covidAdd();" class="w3-btn w3-black w3-round"> 7-25 Days </a>
-		<a href="#two" oncLick="fluAdd();" class="w3-btn w3-black w3-round"> 7-14 Days </a>
+		<a href="#two" onclick="allergyAdd();" class="w3-btn w3-black w3-round"> Several Weeks </a> <!--Creates a "Several Weeks" button which adds to the variable allergy_count by calling the allergyAdd() function. Takes the user to the next question.-->
+		<a href="#two" oncLick="coldAdd();" class="w3-btn w3-black w3-round"> Less than 14 Days </a> <!--Creates a "Less than 14 days" button which adds to the variable cold_count by calling the coldAdd() function. Takes the user to the next question.-->
+		<a href="#two" oncLick="covidAdd();" class="w3-btn w3-black w3-round"> 7-25 Days </a> <!--Creates a "7-25 days" button which adds to the variable covid_count by calling the covidAdd() function. Takes the user to the next question.-->
+		<a href="#two" oncLick="fluAdd();" class="w3-btn w3-black w3-round"> 7-14 Days </a> <!--Creates a "7-14 days" button which adds to the variable flu_count by calling the fluAdd() function. Takes the user to the next question.-->
 	</div> 
 </div>
 
@@ -136,7 +136,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container"> 
 		<p>Do you have a sore throat?</p> <!--Question presented as text on screen below the header-->
 		<a href="#four" onclick="coldAdd(); covidAdd(); fluAdd(); allergyAdd();" class="w3-btn w3-black w3-round"> Yes </a> <!--Creates a "yes" button which adds to the variable cold_count by calling the coldAdd() function. Takes the user to the next question.-->
-		<a href="#four" onclick="allergyAdd(); covidAdd(); fluAdd();" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "no" button which adds to the variable allergy_count by calling the allergyAdd() function. Takes the user to the next question.-->
+		<a href="#four" onclick="allergyAdd(); covidAdd(); fluAdd();" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "no" button which adds to the variables allergy_count, covid_count, and flu_count by calling their respective functions. Takes the user to the next question.-->
 	</div> 
 </div> <!--ends page for Question 3-->
 	
@@ -147,10 +147,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Do you have a cough?</p> <!--prints out text on screen below header-->
-		<a href="#five" onclick="covidAdd(); fluAdd();" class="w3-btn w3-black w3-round"> Dry Cough </a> <!--Creates a "Yes" button which adds to the variable allergy_count by calling the allergyAdd() function. Takes the user to the next question.-->
-		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black w3-round"> Mild Cough </a> <!--Creates a "No" button which adds to the variable cold_count by calling the coldAdd() function. Takes the user to the next question.-->
-		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black w3-round"> Yes, it triggered asthma </a> <!--Creates a "chronic" button which adds to the variable cold_count by calling the coldAdd() function. Takes the user to the next question.-->
-		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "chronic" button which adds to the variable cold_count by calling the coldAdd() function. Takes the user to the next question.-->
+		<a href="#five" onclick="covidAdd(); fluAdd();" class="w3-btn w3-black w3-round"> Dry Cough </a> <!--Creates a "Yes" button which adds to the variable covid_count and flu_count by calling their respective functions. Takes the user to the next question.-->
+		<a href="#five" onclick="coldAdd();" class="w3-btn w3-black w3-round"> Mild Cough </a> <!--Creates a "mild cough" button which adds to the variable cold_count by calling the coldAdd() function. Takes the user to the next question.-->
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black w3-round"> Yes, it triggered asthma </a> <!--Creates a "Yes, it triggered asthma" button which adds to the variable allergy_count by calling the allergyAdd() function. Takes the user to the next question.-->
+		<a href="#five" onclick="allergyAdd();" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "No" button which adds to the variable allergy_count by calling the allergyAdd() function. Takes the user to the next question.-->
 	</div>
 </div> <!--ends page for question 4-->
 	
@@ -159,10 +159,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<h1>Question 5</h1> <!--creates header that reads "Question 5"-->
 	</div>
 	
-	<div id="content" class="w3-container"> <!--separates header from the rest of the page--> <--REVIEW CATEGORIZATION OF SYMPTOMS-->
+	<div id="content" class="w3-container"> <!--separates header from the rest of the page--> 
 		<p>Do you feel aches or pains?</p> <!--text printed below header-->
-		<a href="#six" onclick="coldAdd(); fluAdd(); covidAdd();" class="w3-btn w3-black w3-round"> Yes </a> <!--Creates a "yes" button which adds to the variable cold_count by calling the coldAdd() function. Takes the user to the next question.-->
-		<a href="#six" onclick="allergyAdd(); covidAdd();" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "no" button which adds to the variable allergy_count by calling the allergyAdd() function. Takes the user to the next question.-->
+		<a href="#six" onclick="coldAdd(); fluAdd(); covidAdd();" class="w3-btn w3-black w3-round"> Yes </a> <!--Creates a "yes" button which adds to the variable cold_count, flu_count, covid_count by calling their respective functions. Takes the user to the next question.-->
+		<a href="#six" onclick="allergyAdd(); covidAdd();" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "no" button which adds to the variable allergy_count and covid_count by calling their respective functions. Takes the user to the next question.-->
 	</div>
 </div> <!--ends page for question 5-->
 	
