@@ -173,8 +173,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container"> <!--separates header from the rest of the page-->
 		<p>Are you experiencing shortness of breath?</p> <!--text printed below header-->
-		<a href="#seven" onclick="covidAdd();" class="w3-btn w3-black w3-round"> Yes </a> <!--Creates a "yes" button which adds to the variable allergy_count by calling the allergyAdd() function. Takes the user to the next question.-->
-		<a href="#seven" onclick="coldAdd(); fluAdd(); allergyAdd();" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "no" button which adds to the variable cold_count by calling the coldAdd() function. Takes the user to the next question.-->
+		<a href="#seven" onclick="covidAdd();" class="w3-btn w3-black w3-round"> Yes </a> <!--Creates a "yes" button which adds to the variable covid_count by calling the covidAdd() function. Takes the user to the next question.-->
+		<a href="#seven" onclick="coldAdd(); fluAdd(); allergyAdd();" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "no" button which adds to the variable cold_count, flu_count, and allergy_count by calling their respective functions. Takes the user to the next question.-->
 	</div>
 </div> <!--ends page for question 6-->
 
@@ -185,8 +185,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container"> <!--separates header from the rest of the page-->
 		<p>Have you been sneezing?</p> <!--text printed below header-->
-		<a href="#eight" onclick="coldAdd(); allergyAdd();" class="w3-btn w3-black w3-round"> Yes </a> <!--Creates a "yes" button which adds to the variable allergy_count by calling the allergyAdd() function. Takes the user to the next question.-->
-		<a href="#eight" onclick="covidAdd(); fluAdd();" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "no" button which adds to the variable cold_count by calling the coldAdd() function. Takes the user to the next question.-->
+		<a href="#eight" onclick="coldAdd(); allergyAdd();" class="w3-btn w3-black w3-round"> Yes </a> <!--Creates a "yes" button which adds to the variable allergy_count and cold_count by calling their respective functions. Takes the user to the next question.-->
+		<a href="#eight" onclick="covidAdd(); fluAdd();" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "no" button which adds to the variable covid_count and flu_count by calling their respective functions. Takes the user to the next question.-->
 	</div>
 </div> <!--ends page for question 7-->
 
@@ -197,7 +197,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container"> <!--separates header from the rest of the page-->
 		<p>Is your nose runny or stuffy?</p> <!--text printed below header-->
-		<a href="#nine" onclick="coldAdd(); fluAdd(); allergyAdd();" class="w3-btn w3-black w3-round"> Yes </a> <!--Creates a "yes" button which adds to the variable allergy_count by calling the allergyAdd() function. Takes the user to the next question.-->
+		<a href="#nine" onclick="coldAdd(); fluAdd(); allergyAdd();" class="w3-btn w3-black w3-round"> Yes </a> <!--Creates a "yes" button which adds to the variable cold_count, flu_count, and allergy_count by calling their respective functions. Takes the user to the next question.-->
 		<a href="#nine" onclick="covidAdd();" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "no" button which adds to the variable covid_count by calling the covidAdd() function. Takes the user to the next question.-->
 	</div>
 </div> <!--ends page for question 8-->
@@ -209,7 +209,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container"> <!--separates header from the rest of the page-->
 		<p>Are you experiencing headaches?</p> <!--text printed below header-->
-		<a href="#ten" onclick="covidAdd(); fluAdd(); allergyAdd();" class="w3-btn w3-black w3-round"> Yes </a> <!--Creates a "yes" button which adds to the variable allergy_count by calling the allergyAdd() function. Takes the user to the next question.-->
+		<a href="#ten" onclick="covidAdd(); fluAdd(); allergyAdd();" class="w3-btn w3-black w3-round"> Yes </a> <!--Creates a "yes" button which adds to the variable covid_count, flu_count, and allergy_count by calling their respective functions. Takes the user to the next question.-->
 		<a href="#ten" onclick="coldAdd();" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "no" button which adds to the variable cold_count by calling the coldAdd() function. Takes the user to the next question.-->
 	</div>
 </div> <!--ends page for question 9-->
@@ -221,9 +221,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container"> <!--separates header from the rest of the page-->
 		<p>Do you have diarrhea? If yes, are you a child?</p> <!--text printed below header-->
-		<a href="#eleven" onclick="covidAdd();" class="w3-btn w3-black w3-round"> Yes. Not a child. </a> <!--Creates a "yes" button which adds to the variable allergy_count by calling the allergyAdd() function. Takes the user to the next question.-->
-		<a href="#eleven" onclick="fluAdd();" class="w3-btn w3-black w3-round"> Yes. A child. </a> <!--Creates a "yes" button which adds to the variable allergy_count by calling the allergyAdd() function. Takes the user to the next question.-->
-		<a href="#eleven" onclick="coldAdd(); allergyAdd();" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "no" button which adds to the variable cold_count by calling the coldAdd() function. Takes the user to the next question.-->
+		<a href="#eleven" onclick="covidAdd();" class="w3-btn w3-black w3-round"> Yes. Not a child. </a> <!--Creates a "Yes. Not a child." button which adds to the variable covid_count by calling the covidAdd() function. Takes the user to the next question.-->
+		<a href="#eleven" onclick="fluAdd();" class="w3-btn w3-black w3-round"> Yes. A child. </a> <!--Creates a "Yes. A child." button which adds to the variable flu_count by calling the fluAdd() function. Takes the user to the next question.-->
+		<a href="#eleven" onclick="coldAdd(); allergyAdd();" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "no" button which adds to the variable cold_count and allergy_count by calling the coldAdd() and allergyAdd() functions. Takes the user to the next question.-->
 	</div>
 </div> <!--ends page for question 10-->
 
@@ -234,8 +234,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container"> <!--separates header from the rest of the page-->
 		<p>Are you feeling weak or tired?</p> <!--text printed below header-->
-		<a href="#results" onclick="covidAdd(); fluAdd(); coldAdd(); allergyAdd();" class="w3-btn w3-black w3-round"> Yes</a> <!--Creates a "yes" button which adds to the variable allergy_count by calling the allergyAdd() function. Takes the user to the next question.-->
-		<a href="#results" onclick="coldAdd(); allergyAdd(); covidAdd()" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "no" button which adds to the variable cold_count by calling the coldAdd() function. Takes the user to the next question.-->
+		<a href="#results" onclick="covidAdd(); fluAdd(); coldAdd(); allergyAdd();" class="w3-btn w3-black w3-round"> Yes</a> <!--Creates a "yes" button which adds to the variable flu_count, cold_count, and allergy_count by calling their respective functions. Takes the user to the next question.-->
+		<a href="#results" onclick="coldAdd(); allergyAdd(); covidAdd()" class="w3-btn w3-black w3-round"> No </a> <!--Creates a "no" button which adds to the variable covid_count by calling the covidAdd() function. Takes the user to the next question.-->
 	</div>
 </div> <!--ends page for question 11-->
 	
@@ -244,17 +244,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<h1>Results</h1> <!--header reads "Results"-->
 	</div> <!--separates header from the rest of the page-->
 	
-	<canvas id="a" width= 300 height= 225 style="border:1px solid #000000;"></canvas> <!--creates a canvas 
-	that is 300 by 225 with a one pixel width, black border--> 
-	
-	<!-- Begins code for column chart. Code is written in JavaScript -->
+	<!--
+	<!-- Begins code for column chart. Code is written in JavaScript.
 	<script>
 	window.onload = function () {
 
-	var chart = new CanvasJS.Chart("chartContainer", { //creates a variable called chart that stores the data for the column chart
+	var chart = new CanvasJS.Chart("chartContainer", { //creates a variable called chart that creates a canvas to display the column chart
 		//code below sets the style\colors of chart
 		animationEnabled: true,
-		theme: "light2", // "light1", "light2", "dark1", "dark2"
+		theme: "light2", 
 		title:{
 			text: "What Your Symptoms Indicate" //title of column chart
 		},
@@ -263,7 +261,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		},
 		data: [{        
 			type: "column",  
-			showInLegend: true, 
+			showInLegend: true, //displays the x-axis title
 			legendMarkerColor: "grey",
 			legendText: "Illness", //title of x-axis
 			dataPoints: [      
@@ -280,9 +278,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</script>
 	</head>
 	<body>
-	<div id="chartContainer" style="height: 300px; width: 100%;"></div>
-	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> <!-- ends code for column chart. Closes out JavaScript code -->	
+	<div id="chartContainer" style="height: 300px; width: 100%;"></div> <!-- Sets the dimensions for the canvas with the name "chartContainer".
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> --> <!--ends code for column chart. Closes out JavaScript code --> 	
 	
+		
 	<script> //indicates that this code is being written in javascript
 	function showResults() { //function called showResults created. This does the math required to make the allergy or cold counts into percentages.
 		var resultText = document.getElementById("results"); //creates a variable called resultText which prints the results of the user's response on the results page.
@@ -291,7 +290,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		var coldPercent = (((cold_count)/(total))*100); //turns the cold count into a percentage by dividing the cold count by the total and multiplying by 100.
 		var covidPercent = (((covid_count)/(total))*100); //turns the covid count into a percentage by dividing the covid count by the total and multiplying by 100.
 		var fluPercent = (((flu_count)/(total))*100); //turns the flu count into a percentage by dividing the flu count by the total and multiplying by 100.
-		resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" + "<br> Probability it is a cold = " + coldPercent + "%" + "<br> Probability it is Covid-19 = " covidPercent + "%" + "<br> Probability it is the flu = " + fluPercent + "%"; //Prints out a string of text that combines the numbers retrieved mathematically with the words "probability it is a cold/allerigies/covid-19/flu"-->
+		resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" + "<br> Probability it is a cold = " + coldPercent + "%" + "<br> Probability it is Covid-19 = " +
+			covidPercent + "%" + "<br> Probability it is the flu = " + fluPercent + "%" +"<br> Ideally on this page a column chart would print out with bars matching the percentages that get been calculated." + 
+			"There would be four columns on the chart, one for each variable. The height of the column would match the percent likelihood of having the illness."; //Prints out a string of text that combines the numbers retrieved mathematically with the words "probability it is a cold/allerigies/covid-19/flu"-->
 	}
 	</script> <!--ends code written in javascript-->
 	
